@@ -100,7 +100,7 @@ def ml_icin_veri_hazirla(df_akis):
     """
     print("\n--- Makine Öğrenimi İçin Veri Ön İşleme Başlatılıyor ---")
     
-    # ADIM 1: Veri Tipi Standardizasyonu (Önceki hatanın çözümü)
+    # ADIM 1: Veri Tipi Standartlaştırma
     df_akis['Protokol'] = df_akis['Protokol'].astype(str)
     df_akis['Kaynak_Port'] = df_akis['Kaynak_Port'].astype(str)   #port numarası sayısal değildir burada, kategorik olduğu için metin olarak alacağız. 
     df_akis['Hedef_Port'] = df_akis['Hedef_Port'].astype(str)
@@ -165,7 +165,7 @@ def sonuclar_kayit(df_akis, kume_etiketleri, dosya_yolu):
     print("\nKüme Ortalamaları (Özet):")
     print(kume_ozeti)
     
-    #Görseller-------------------------------------------------------------
+    #------------------------------Görseller-------------------------------------------------------------
     
 def gorsel_sonuclar(X_islenmis_np, kume_etiketleri, kume_sayisi):
     
@@ -252,7 +252,7 @@ if __name__ == "__main__":
         print("\nHata oluştu.")
 
 
-#zaman analizi eksik eklenebilir. 
+# Zaman analizi eksik eklenebilir. 
 # Paketlerin geliş zaman aralıkları (arrival time) veya saniyedeki paket sayısı (pps) gibi zaman bazlı özellikler DDoS tespitinde daha kritiktir verilerdir. 
 
 print( "devam ediyor...")
